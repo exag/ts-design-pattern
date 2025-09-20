@@ -9,7 +9,7 @@ class Client {
   private shape: Shape;
 }
 
-class Rectangle {
+class Rectangle implements Shape {
   private width: number;
   private height: number;
 
@@ -17,7 +17,7 @@ class Rectangle {
     return this.width * this.height;
   }
 }
-class Circle {
+class Circle implements Shape {
   private radius: number;
 
   calcArea(): number {
