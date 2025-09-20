@@ -29,15 +29,25 @@ class SeniorEmployee implements IEmployee {
   }
 }
 
+class ExpertEmployee implements IEmployee {
+  constructor(public name: string) {}
+
+  getBonus(base: number): number {
+    return Math.floor(base * 2.5);
+  }
+}
+
 function run() {
   const emp1 = new JuniorEmployee("Yamada");
   const emp2 = new MiddleEmployee("Suzuki");
   const emp3 = new SeniorEmployee("Tanaka");
+  const emp4 = new ExpertEmployee("Saitou");
 
   const base = 100;
   console.log(emp1.getBonus(base));
   console.log(emp2.getBonus(base));
   console.log(emp3.getBonus(base));
+  console.log(emp4.getBonus(base));
 }
 
 run();
